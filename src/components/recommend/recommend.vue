@@ -1,7 +1,7 @@
 <template>
   <div class="recommend">
     <div class="recommend-content">
-      <div class="slider-wrapper">
+      <div v-if="recommends.length" class="slider-wrapper">
         <slider>
           <div v-for="(item, index) in recommends"  :key="index">
             <a :href="item.linkUrl">
@@ -10,10 +10,10 @@
           </div>
         </slider>
       </div>
-    </div>
-    <div class="recommend-list">
-      <h1 class="list-title">热门歌单推荐</h1>
-      <ul></ul>
+      <div class="recommend-list">
+        <h1 class="list-title">热门歌单推荐</h1>
+        <ul></ul>
+      </div>
     </div>
   </div>
 </template>
